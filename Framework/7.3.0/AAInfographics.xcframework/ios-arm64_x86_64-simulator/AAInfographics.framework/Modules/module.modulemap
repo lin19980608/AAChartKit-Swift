@@ -1,0 +1,11 @@
+framework module AAInfographics {
+  umbrella header "AAInfographics-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AAInfographics.Swift {
+  header "AAInfographics-Swift.h"
+  requires objc
+}

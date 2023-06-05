@@ -1,0 +1,2389 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AAInfographics
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+@_exported import AAInfographics
+import Foundation
+import Swift
+import WebKit
+import _Concurrency
+import _StringProcessing
+@_inheritsConvenienceInitializers public class AAAnimation : AAInfographics.AAObject {
+  public var duration: Swift.Int?
+  public var easing: Swift.Int?
+  @discardableResult
+  public func duration(_ prop: Swift.Int?) -> AAInfographics.AAAnimation
+  @discardableResult
+  public func easing(_ prop: AAInfographics.AAChartAnimationType?) -> AAInfographics.AAAnimation
+  public init()
+  @objc deinit
+}
+public enum AAChartAxisType : Swift.String {
+  case linear
+  case logarithmic
+  case datetime
+  case category
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class AAAxis : AAInfographics.AAObject {
+  public var allowDecimals: Swift.Bool?
+  public var alternateGridColor: Any?
+  public var crosshair: AAInfographics.AACrosshair?
+  public var title: AAInfographics.AATitle?
+  public var type: Swift.String?
+  public var dateTimeLabelFormats: AAInfographics.AADateTimeLabelFormats?
+  public var plotBands: [AAInfographics.AAPlotBandsElement]?
+  public var plotLines: [AAInfographics.AAPlotLinesElement]?
+  public var categories: [Swift.String]?
+  public var reversed: Swift.Bool?
+  public var lineWidth: Swift.Float?
+  public var lineColor: Swift.String?
+  public var linkedTo: Swift.Int?
+  public var max: Swift.Double?
+  public var min: Swift.Double?
+  public var maxPadding: Swift.Float?
+  public var minPadding: Swift.Float?
+  public var minRange: Swift.Int?
+  public var minTickInterval: Swift.Int?
+  public var minorGridLineColor: Swift.String?
+  public var minorGridLineDashStyle: Swift.String?
+  public var minorGridLineWidth: Swift.Float?
+  public var minorTickColor: Swift.String?
+  public var minorTickInterval: Any?
+  public var minorTickLength: Swift.Float?
+  public var minorTickPosition: Swift.String?
+  public var minorTickWidth: Swift.Float?
+  public var gridLineWidth: Swift.Float?
+  public var gridLineColor: Swift.String?
+  public var gridLineDashStyle: Swift.String?
+  public var gridLineInterpolation: Swift.String?
+  public var gridZIndex: Swift.Int?
+  public var offset: Swift.Float?
+  public var labels: AAInfographics.AALabels?
+  public var visible: Swift.Bool?
+  public var opposite: Swift.Bool?
+  public var startOnTick: Swift.Bool?
+  public var endOnTick: Swift.Bool?
+  public var tickColor: Swift.String?
+  public var tickAmount: Swift.Int?
+  public var tickInterval: Swift.Float?
+  public var tickmarkPlacement: Swift.String?
+  public var tickWidth: Swift.Float?
+  public var tickLength: Swift.Float?
+  public var tickPosition: Swift.String?
+  public var tickPositions: [Any]?
+  @discardableResult
+  public func allowDecimals(_ prop: Swift.Bool?) -> Self
+  @discardableResult
+  public func alternateGridColor(_ prop: Any?) -> Self
+  @discardableResult
+  public func crosshair(_ prop: AAInfographics.AACrosshair?) -> Self
+  @discardableResult
+  public func title(_ prop: AAInfographics.AATitle?) -> Self
+  @discardableResult
+  public func type(_ prop: AAInfographics.AAChartAxisType?) -> Self
+  @discardableResult
+  public func dateTimeLabelFormats(_ prop: AAInfographics.AADateTimeLabelFormats?) -> Self
+  @discardableResult
+  public func plotBands(_ prop: [AAInfographics.AAPlotBandsElement]?) -> Self
+  @discardableResult
+  public func plotLines(_ prop: [AAInfographics.AAPlotLinesElement]?) -> Self
+  @discardableResult
+  public func categories(_ prop: [Swift.String]?) -> Self
+  @discardableResult
+  public func reversed(_ prop: Swift.Bool?) -> Self
+  @discardableResult
+  public func lineWidth(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func lineColor(_ prop: Swift.String?) -> Self
+  @discardableResult
+  public func linkedTo(_ prop: Swift.Int?) -> Self
+  @discardableResult
+  public func max(_ prop: Swift.Double?) -> Self
+  @discardableResult
+  public func min(_ prop: Swift.Double?) -> Self
+  @discardableResult
+  public func maxPadding(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func minPadding(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func minRange(_ prop: Swift.Int?) -> Self
+  @discardableResult
+  public func minTickInterval(_ prop: Swift.Int?) -> Self
+  @discardableResult
+  public func minorGridLineColor(_ prop: Swift.String?) -> Self
+  @discardableResult
+  public func minorGridLineDashStyle(_ prop: AAInfographics.AAChartLineDashStyleType?) -> Self
+  @discardableResult
+  public func minorGridLineWidth(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func minorTickColor(_ prop: Swift.String?) -> Self
+  @discardableResult
+  public func minorTickInterval(_ prop: Any?) -> Self
+  @discardableResult
+  public func minorTickLength(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func minorTickPosition(_ prop: Swift.String?) -> Self
+  @discardableResult
+  public func minorTickWidth(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func gridLineWidth(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func gridLineColor(_ prop: Swift.String?) -> Self
+  @discardableResult
+  public func gridLineDashStyle(_ prop: AAInfographics.AAChartLineDashStyleType?) -> Self
+  @discardableResult
+  public func gridLineInterpolation(_ prop: Swift.String?) -> Self
+  @discardableResult
+  public func gridZIndex(_ prop: Swift.Int?) -> Self
+  @discardableResult
+  public func offset(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func labels(_ prop: AAInfographics.AALabels?) -> Self
+  @discardableResult
+  public func visible(_ prop: Swift.Bool?) -> Self
+  @discardableResult
+  public func opposite(_ prop: Swift.Bool?) -> Self
+  @discardableResult
+  public func startOnTick(_ prop: Swift.Bool?) -> Self
+  @discardableResult
+  public func endOnTick(_ prop: Swift.Bool?) -> Self
+  @discardableResult
+  public func tickColor(_ prop: Swift.String?) -> Self
+  @discardableResult
+  public func tickAmount(_ prop: Swift.Int?) -> Self
+  @discardableResult
+  public func tickInterval(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func tickmarkPlacement(_ prop: Swift.String?) -> Self
+  @discardableResult
+  public func tickWidth(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func tickLength(_ prop: Swift.Float?) -> Self
+  @discardableResult
+  public func tickPosition(_ prop: Swift.String?) -> Self
+  @discardableResult
+  public func tickPositions(_ prop: [Any]?) -> Self
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AADateTimeLabelFormats : AAInfographics.AAObject {
+  public var millisecond: Swift.String?
+  public var second: Swift.String?
+  public var minute: Swift.String?
+  public var hour: Swift.String?
+  public var day: Swift.String?
+  public var week: Swift.String?
+  public var month: Swift.String?
+  public var year: Swift.String?
+  @discardableResult
+  public func millisecond(_ prop: Swift.String?) -> AAInfographics.AADateTimeLabelFormats
+  @discardableResult
+  public func second(_ prop: Swift.String?) -> AAInfographics.AADateTimeLabelFormats
+  @discardableResult
+  public func minute(_ prop: Swift.String?) -> AAInfographics.AADateTimeLabelFormats
+  @discardableResult
+  public func hour(_ prop: Swift.String?) -> AAInfographics.AADateTimeLabelFormats
+  @discardableResult
+  public func day(_ prop: Swift.String?) -> AAInfographics.AADateTimeLabelFormats
+  @discardableResult
+  public func week(_ prop: Swift.String?) -> AAInfographics.AADateTimeLabelFormats
+  @discardableResult
+  public func month(_ prop: Swift.String?) -> AAInfographics.AADateTimeLabelFormats
+  @discardableResult
+  public func year(_ prop: Swift.String?) -> AAInfographics.AADateTimeLabelFormats
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAChart : AAInfographics.AAObject {
+  public var type: Swift.String?
+  public var backgroundColor: Any?
+  public var plotBackgroundColor: Any?
+  public var plotBackgroundImage: Swift.String?
+  public var pinchType: Swift.String?
+  public var panning: Swift.Bool?
+  public var panKey: Swift.String?
+  public var polar: Swift.Bool?
+  public var animation: AAInfographics.AAAnimation?
+  public var inverted: Swift.Bool?
+  public var margin: [Any?]?
+  public var marginTop: Swift.Float?
+  public var marginRight: Swift.Float?
+  public var marginBottom: Swift.Float?
+  public var marginLeft: Swift.Float?
+  public var spacing: [Swift.Float]?
+  public var spacingTop: Swift.Float?
+  public var spacingRight: Swift.Float?
+  public var spacingBottom: Swift.Float?
+  public var spacingLeft: Swift.Float?
+  public var scrollablePlotArea: AAInfographics.AAScrollablePlotArea?
+  public var resetZoomButton: AAInfographics.AAResetZoomButton?
+  public var zoomType: Swift.String?
+  public var events: AAInfographics.AAChartEvents?
+  public var height: Any?
+  @discardableResult
+  public func height(_ prop: AAInfographics.AAChartType?) -> AAInfographics.AAChart
+  @discardableResult
+  public func type(_ prop: AAInfographics.AAChartType?) -> AAInfographics.AAChart
+  @discardableResult
+  public func backgroundColor(_ prop: Any?) -> AAInfographics.AAChart
+  @discardableResult
+  public func plotBackgroundColor(_ prop: Any?) -> AAInfographics.AAChart
+  @discardableResult
+  public func plotBackgroundImage(_ prop: Swift.String?) -> AAInfographics.AAChart
+  @discardableResult
+  public func pinchType(_ prop: AAInfographics.AAChartZoomType?) -> AAInfographics.AAChart
+  @discardableResult
+  public func panning(_ prop: Swift.Bool?) -> AAInfographics.AAChart
+  @discardableResult
+  public func panKey(_ prop: Swift.String?) -> AAInfographics.AAChart
+  @discardableResult
+  public func polar(_ prop: Swift.Bool?) -> AAInfographics.AAChart
+  @discardableResult
+  public func animation(_ prop: AAInfographics.AAAnimation?) -> AAInfographics.AAChart
+  @discardableResult
+  public func inverted(_ prop: Swift.Bool?) -> AAInfographics.AAChart
+  @discardableResult
+  public func margin(_ prop: [Any?]?) -> AAInfographics.AAChart
+  @discardableResult
+  public func margin(top: Any? = nil, right: Any? = nil, bottom: Any? = nil, left: Any? = nil) -> AAInfographics.AAChart
+  @discardableResult
+  public func marginTop(_ prop: Swift.Float?) -> AAInfographics.AAChart
+  @discardableResult
+  public func marginRight(_ prop: Swift.Float?) -> AAInfographics.AAChart
+  @discardableResult
+  public func marginBottom(_ prop: Swift.Float?) -> AAInfographics.AAChart
+  @discardableResult
+  public func marginLeft(_ prop: Swift.Float?) -> AAInfographics.AAChart
+  @discardableResult
+  public func spacing(top: Swift.Float = 10, right: Swift.Float = 10, bottom: Swift.Float = 15, left: Swift.Float = 10) -> AAInfographics.AAChart
+  @discardableResult
+  public func spacingTop(_ prop: Swift.Float?) -> AAInfographics.AAChart
+  @discardableResult
+  public func spacingRight(_ prop: Swift.Float?) -> AAInfographics.AAChart
+  @discardableResult
+  public func spacingBottom(_ prop: Swift.Float?) -> AAInfographics.AAChart
+  @discardableResult
+  public func spacingLeft(_ prop: Swift.Float?) -> AAInfographics.AAChart
+  @discardableResult
+  public func scrollablePlotArea(_ prop: AAInfographics.AAScrollablePlotArea?) -> AAInfographics.AAChart
+  @discardableResult
+  public func resetZoomButton(_ prop: AAInfographics.AAResetZoomButton?) -> AAInfographics.AAChart
+  @discardableResult
+  public func zoomType(_ prop: AAInfographics.AAChartZoomType?) -> AAInfographics.AAChart
+  @discardableResult
+  public func events(_ prop: AAInfographics.AAChartEvents?) -> AAInfographics.AAChart
+  public init()
+  @objc deinit
+}
+public func AAMargin(left: Swift.Float, right: Swift.Float) -> [Any?]?
+public func AAMargin(top: Swift.Float, bottom: Swift.Float) -> [Any?]?
+@_inheritsConvenienceInitializers public class AAResetZoomButton : AAInfographics.AAObject {
+  public var position: AAInfographics.AAPosition?
+  public var relativeTo: Swift.String?
+  public var theme: [Swift.String : Any]?
+  @discardableResult
+  public func position(_ prop: AAInfographics.AAPosition?) -> AAInfographics.AAResetZoomButton
+  @discardableResult
+  public func relativeTo(_ prop: Swift.String?) -> AAInfographics.AAResetZoomButton
+  @discardableResult
+  public func theme(_ prop: [Swift.String : Any]?) -> AAInfographics.AAResetZoomButton
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAChartEvents : AAInfographics.AAObject {
+  public var load: Swift.String?
+  public var selection: Swift.String?
+  @discardableResult
+  public func load(_ prop: Swift.String?) -> AAInfographics.AAChartEvents
+  @discardableResult
+  public func selection(_ prop: Swift.String?) -> AAInfographics.AAChartEvents
+  public init()
+  @objc deinit
+}
+public enum AAChartAnimationType : Swift.Int {
+  case linear
+  case easeInQuad
+  case easeOutQuad
+  case easeInOutQuad
+  case easeInCubic
+  case easeOutCubic
+  case easeInOutCubic
+  case easeInQuart
+  case easeOutQuart
+  case easeInOutQuart
+  case easeInQuint
+  case easeOutQuint
+  case easeInOutQuint
+  case easeInSine
+  case easeOutSine
+  case easeInOutSine
+  case easeInExpo
+  case easeOutExpo
+  case easeInOutExpo
+  case easeInCirc
+  case easeOutCirc
+  case easeInOutCirc
+  case easeOutBounce
+  case easeInBack
+  case easeOutBack
+  case easeInOutBack
+  case elastic
+  case swingFromTo
+  case swingFrom
+  case swingTo
+  case bounce
+  case bouncePast
+  case easeFromTo
+  case easeFrom
+  case easeTo
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum AAChartType : Swift.String {
+  case column
+  case bar
+  case area
+  case areaspline
+  case line
+  case spline
+  case scatter
+  case pie
+  case bubble
+  case pyramid
+  case funnel
+  case columnrange
+  case arearange
+  case areasplinerange
+  case boxplot
+  case waterfall
+  case polygon
+  case gauge
+  case errorbar
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AAChartLayoutType : Swift.String {
+  case horizontal, vertical
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AAChartAlignType : Swift.String {
+  case left, center, right
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AAChartVerticalAlignType : Swift.String {
+  case top, middle, bottom
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AAChartZoomType : Swift.String {
+  case none, x, y, xy
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AAChartStackingType : Swift.String {
+  case none, normal, percent
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AAChartSymbolType : Swift.String {
+  case circle
+  case square
+  case diamond
+  case triangle
+  case triangleDown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AAChartSymbolStyleType : Swift.String {
+  case normal, innerBlank, borderBlank
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AAChartFontWeightType : Swift.String {
+  case thin, regular, bold
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AAChartLineDashStyleType : Swift.String {
+  case solid
+  case shortDash
+  case shortDot
+  case shortDashDot
+  case shortDashDotDot
+  case dot
+  case dash
+  case longDash
+  case dashDot
+  case longDashDot
+  case longDashDotDot
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class AAChartModel : AAInfographics.AAObject {
+  public var animationType: AAInfographics.AAChartAnimationType?
+  public var animationDuration: Swift.Int?
+  public var title: Swift.String?
+  public var titleStyle: AAInfographics.AAStyle?
+  public var subtitle: Swift.String?
+  public var subtitleAlign: AAInfographics.AAChartAlignType?
+  public var subtitleStyle: AAInfographics.AAStyle?
+  public var chartType: AAInfographics.AAChartType?
+  public var stacking: AAInfographics.AAChartStackingType?
+  public var markerSymbol: AAInfographics.AAChartSymbolType?
+  public var markerSymbolStyle: AAInfographics.AAChartSymbolStyleType?
+  public var zoomType: AAInfographics.AAChartZoomType?
+  public var inverted: Swift.Bool?
+  public var xAxisReversed: Swift.Bool?
+  public var yAxisReversed: Swift.Bool?
+  public var polar: Swift.Bool?
+  public var margin: [Any?]?
+  public var dataLabelsEnabled: Swift.Bool?
+  public var dataLabelsStyle: AAInfographics.AAStyle?
+  public var xAxisLabelsEnabled: Swift.Bool?
+  public var xAxisLabelsStyle: AAInfographics.AAStyle?
+  public var categories: [Swift.String]?
+  public var xAxisGridLineWidth: Swift.Float?
+  public var xAxisVisible: Swift.Bool?
+  public var xAxisTickInterval: Swift.Float?
+  public var yAxisVisible: Swift.Bool?
+  public var yAxisLabelsEnabled: Swift.Bool?
+  public var yAxisLabelsStyle: AAInfographics.AAStyle?
+  public var yAxisTitle: Swift.String?
+  public var xAxisTitle: Swift.String?
+  public var yAxisLineWidth: Swift.Float?
+  public var yAxisGridLineWidth: Swift.Float?
+  public var yAxisMin: Swift.Double?
+  public var yAxisMax: Swift.Double?
+  public var yAxisTickPositions: [Any]?
+  public var yAxisAllowDecimals: Swift.Bool?
+  public var tooltipEnabled: Swift.Bool?
+  public var tooltipValueSuffix: Swift.String?
+  public var colorsTheme: [Any]?
+  public var series: [Any]?
+  public var legendEnabled: Swift.Bool?
+  public var backgroundColor: Any?
+  public var borderRadius: Swift.Float?
+  public var markerRadius: Swift.Float?
+  public var scrollablePlotArea: AAInfographics.AAScrollablePlotArea?
+  @discardableResult
+  public func animationType(_ prop: AAInfographics.AAChartAnimationType) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func animationDuration(_ prop: Swift.Int) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func title(_ prop: Swift.String) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func titleStyle(_ prop: AAInfographics.AAStyle) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func subtitle(_ prop: Swift.String) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func subtitleAlign(_ prop: AAInfographics.AAChartAlignType) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func subtitleStyle(_ prop: AAInfographics.AAStyle) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func chartType(_ prop: AAInfographics.AAChartType) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func stacking(_ prop: AAInfographics.AAChartStackingType) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func markerRadius(_ prop: Swift.Float) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func markerSymbol(_ prop: AAInfographics.AAChartSymbolType) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func markerSymbolStyle(_ prop: AAInfographics.AAChartSymbolStyleType) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func zoomType(_ prop: AAInfographics.AAChartZoomType) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func inverted(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func xAxisReversed(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisReversed(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func tooltipEnabled(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func tooltipValueSuffix(_ prop: Swift.String) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func polar(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func margin(_ prop: [Any?]?) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func margin(top: Any? = nil, right: Any? = nil, bottom: Any? = nil, left: Any? = nil) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func dataLabelsEnabled(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func dataLabelsStyle(_ prop: AAInfographics.AAStyle) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func xAxisLabelsEnabled(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func xAxisLabelsStyle(_ prop: AAInfographics.AAStyle) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func categories(_ prop: [Swift.String]) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func xAxisGridLineWidth(_ prop: Swift.Float) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func xAxisVisible(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func xAxisTickInterval(_ prop: Swift.Float) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisVisible(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisLabelsEnabled(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisLabelsStyle(_ prop: AAInfographics.AAStyle) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisTitle(_ prop: Swift.String) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func xAxisTitle(_ prop: Swift.String) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisLineWidth(_ prop: Swift.Float) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisMin(_ prop: Swift.Double) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisMax(_ prop: Swift.Double) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisTickPositions(_ prop: [Any]) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisAllowDecimals(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func yAxisGridLineWidth(_ prop: Swift.Float) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func colorsTheme(_ prop: [Any]) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func series(_ prop: [Any]) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func legendEnabled(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func backgroundColor(_ prop: Any) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func borderRadius(_ prop: Swift.Float) -> AAInfographics.AAChartModel
+  @discardableResult
+  public func scrollablePlotArea(_ prop: AAInfographics.AAScrollablePlotArea) -> AAInfographics.AAChartModel
+  public init()
+  @available(*, unavailable, message: "please use titleStyle instead of it")
+  public var titleFontColor: Swift.String?
+  @available(*, unavailable, message: "please use titleStyle instead of it")
+  public var titleFontSize: Swift.Float?
+  @available(*, unavailable, message: "please use titleStyle instead of it")
+  public var titleFontWeight: AAInfographics.AAChartFontWeightType?
+  @available(*, unavailable, message: "please use subtitleStyle instead of it")
+  public var subtitleFontColor: Swift.String?
+  @available(*, unavailable, message: "please use subtitleStyle instead of it")
+  public var subtitleFontSize: Swift.Float?
+  @available(*, unavailable, message: "please use subtitleStyle instead of it")
+  public var subtitleFontWeight: AAInfographics.AAChartFontWeightType?
+  @available(*, unavailable, message: "please use dataLabelsStyle instead of it")
+  public var dataLabelsFontColor: Swift.String?
+  @available(*, unavailable, message: "please use dataLabelsStyle instead of it")
+  public var dataLabelsFontSize: Swift.Float?
+  @available(*, unavailable, message: "please use dataLabelsStyle instead of it")
+  public var dataLabelsFontWeight: AAInfographics.AAChartFontWeightType?
+  @available(*, unavailable, message: "please use xAxisLabelsStyle or yAxisLabelsStyle instead of it")
+  public var axesTextColor: Swift.String?
+  @available(*, unavailable, message: "This property is useless now, please remove it directly")
+  public var touchEventEnabled: Swift.Bool?
+  @available(*, unavailable, message: "please use titleStyle instead of it")
+  public func titleFontColor(_ prop: Swift.String) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "please use titleStyle instead of it")
+  public func titleFontSize(_ prop: Swift.Float?) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "please use titleStyle instead of it")
+  public func titleFontWeight(_ prop: AAInfographics.AAChartFontWeightType) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "please use subtitleStyle instead of it")
+  public func subtitleFontColor(_ prop: Swift.String) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "please use subtitleStyle instead of it")
+  public func subtitleFontSize(_ prop: Swift.Float?) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "please use subtitleStyle instead of it")
+  public func subtitleFontWeight(_ prop: AAInfographics.AAChartFontWeightType) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "please use dataLabelsStyle instead of it")
+  public func dataLabelsFontColor(_ prop: Swift.String) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "please use dataLabelsStyle instead of it")
+  public func dataLabelsFontSize(_ prop: Swift.Float?) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "please use dataLabelsStyle instead of it")
+  public func dataLabelsFontWeight(_ prop: AAInfographics.AAChartFontWeightType) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "please use xAxisLabelsStyle or yAxisLabelsStyle instead of it")
+  public func axesTextColor(_ prop: Swift.String) -> AAInfographics.AAChartModel
+  @available(*, unavailable, message: "This setter function is useless now, please remove it directly")
+  public func touchEventEnabled(_ prop: Swift.Bool) -> AAInfographics.AAChartModel
+  @objc deinit
+}
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+@objc public protocol AAChartViewDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func aaChartViewDidFinishLoad(_ aaChartView: AAInfographics.AAChartView)
+  @objc optional func aaChartViewDidFinishEvaluate(_ aaChartView: AAInfographics.AAChartView)
+  @objc optional func aaChartView(_ aaChartView: AAInfographics.AAChartView, clickEventMessage: AAInfographics.AAClickEventMessageModel)
+  @objc optional func aaChartView(_ aaChartView: AAInfographics.AAChartView, moveOverEventMessage: AAInfographics.AAMoveOverEventMessageModel)
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+public class AAEventMessageModel : ObjectiveC.NSObject {
+  public var name: Swift.String?
+  public var x: Swift.Float?
+  public var y: Swift.Float?
+  public var category: Swift.String?
+  public var offset: [Swift.String : Any]?
+  public var index: Swift.Int?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+public class AAClickEventMessageModel : AAInfographics.AAEventMessageModel {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+public class AAMoveOverEventMessageModel : AAInfographics.AAEventMessageModel {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+public class AALeakAvoider : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler {
+  public init(delegate: WebKit.WKScriptMessageHandler)
+  @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+@_Concurrency.MainActor(unsafe) public class AAChartView : WebKit.WKWebView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: AAInfographics.AAChartViewDelegate? {
+    get
+    set
+  }
+  @available(*, unavailable, message: "This property was renamed, please use isScrollEnabled instead of it")
+  @_Concurrency.MainActor(unsafe) public var scrollEnabled: Swift.Bool?
+  @_Concurrency.MainActor(unsafe) public var isScrollEnabled: Swift.Bool? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var isClearBackgroundColor: Swift.Bool? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var isSeriesHidden: Swift.Bool? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var contentWidth: CoreFoundation.CGFloat? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var contentHeight: CoreFoundation.CGFloat? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc convenience dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required convenience dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+extension AAInfographics.AAChartView {
+  @_Concurrency.MainActor(unsafe) public func aa_drawChartWithChartModel(_ aaChartModel: AAInfographics.AAChartModel)
+  @_Concurrency.MainActor(unsafe) public func aa_onlyRefreshTheChartDataWithChartModelSeries(_ chartModelSeries: [AAInfographics.AASeriesElement])
+  @_Concurrency.MainActor(unsafe) public func aa_onlyRefreshTheChartDataWithChartModelSeries(_ chartModelSeries: [AAInfographics.AASeriesElement], animation: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func aa_refreshChartWholeContentWithChartModel(_ aaChartModel: AAInfographics.AAChartModel)
+}
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+extension AAInfographics.AAChartView {
+  @_Concurrency.MainActor(unsafe) public func aa_drawChartWithChartOptions(_ aaOptions: AAInfographics.AAOptions)
+  @_Concurrency.MainActor(unsafe) public func aa_onlyRefreshTheChartDataWithChartOptionsSeries(_ chartOptionsSeries: [AAInfographics.AASeriesElement])
+  @_Concurrency.MainActor(unsafe) public func aa_onlyRefreshTheChartDataWithChartOptionsSeries(_ chartOptionsSeries: [AAInfographics.AASeriesElement], animation: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func aa_refreshChartWholeContentWithChartOptions(_ aaOptions: AAInfographics.AAOptions)
+}
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+extension AAInfographics.AAChartView {
+  @_Concurrency.MainActor(unsafe) public func aa_updateChart(options: AAInfographics.AAObject, redraw: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func aa_addPointToChartSeriesElement(elementIndex: Swift.Int, options: Any)
+  @_Concurrency.MainActor(unsafe) public func aa_addPointToChartSeriesElement(elementIndex: Swift.Int, options: Any, shift: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func aa_addPointToChartSeriesElement(elementIndex: Swift.Int, options: Any, redraw: Swift.Bool, shift: Swift.Bool, animation: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func aa_addPointsToChartSeriesArray(optionsArr: [Any], shift: Swift.Bool = true, animation: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func aa_addElementToChartSeries(element: AAInfographics.AASeriesElement)
+  @_Concurrency.MainActor(unsafe) public func aa_removeElementFromChartSeries(elementIndex: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func aa_showTheSeriesElementContentWithSeriesElementIndex(_ elementIndex: ObjectiveC.NSInteger)
+  @_Concurrency.MainActor(unsafe) public func aa_hideTheSeriesElementContentWithSeriesElementIndex(_ elementIndex: ObjectiveC.NSInteger)
+  @_Concurrency.MainActor(unsafe) public func aa_evaluateJavaScriptStringFunction(_ JSFunctionString: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func aa_updateXAxisCategories(_ categories: [Swift.String], redraw: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func aa_updateXAxisExtremes(min: Swift.Int, max: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func aa_redraw(animation: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) public func aa_adaptiveScreenRotation()
+  @_Concurrency.MainActor(unsafe) public func aa_adaptiveScreenRotationWithAnimation(_ animation: AAInfographics.AAAnimation)
+}
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+extension AAInfographics.AAChartView : WebKit.WKUIDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+}
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+extension AAInfographics.AAChartView : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+}
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+extension AAInfographics.AAChartView : WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+@_hasMissingDesignatedInitializers public class AAColor {
+  public class var black: Swift.String {
+    get
+  }
+  public class var darkGray: Swift.String {
+    get
+  }
+  public class var lightGray: Swift.String {
+    get
+  }
+  public class var white: Swift.String {
+    get
+  }
+  public class var gray: Swift.String {
+    get
+  }
+  public class var red: Swift.String {
+    get
+  }
+  public class var green: Swift.String {
+    get
+  }
+  public class var blue: Swift.String {
+    get
+  }
+  public class var cyan: Swift.String {
+    get
+  }
+  public class var yellow: Swift.String {
+    get
+  }
+  public class var magenta: Swift.String {
+    get
+  }
+  public class var orange: Swift.String {
+    get
+  }
+  public class var purple: Swift.String {
+    get
+  }
+  public class var brown: Swift.String {
+    get
+  }
+  public class var clear: Swift.String {
+    get
+  }
+  public class func rgbaColor(_ red: Swift.Int, _ green: Swift.Int, _ blue: Swift.Int, _ alpha: Swift.Float = 1) -> Swift.String
+  @objc deinit
+}
+public func AARgba(_ red: Swift.Int, _ green: Swift.Int, _ blue: Swift.Int, _ alpha: Swift.Float = 1) -> Swift.String
+public func AARgb(_ red: Swift.Int, _ green: Swift.Int, _ blue: Swift.Int) -> Swift.String
+@_inheritsConvenienceInitializers public class AACredits : AAInfographics.AAObject {
+  public var enabled: Swift.Bool?
+  public var href: Swift.String?
+  public var position: AAInfographics.AAPosition?
+  public var style: AAInfographics.AAStyle?
+  public var text: Swift.String?
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool?) -> AAInfographics.AACredits
+  @discardableResult
+  public func href(_ prop: Swift.String?) -> AAInfographics.AACredits
+  @discardableResult
+  public func position(_ prop: AAInfographics.AAPosition?) -> AAInfographics.AACredits
+  @discardableResult
+  public func style(_ prop: AAInfographics.AAStyle?) -> AAInfographics.AACredits
+  @discardableResult
+  public func text(_ prop: Swift.String?) -> AAInfographics.AACredits
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAPosition : AAInfographics.AAObject {
+  public var align: Swift.String?
+  public var verticalAlign: Swift.String?
+  public var x: Swift.Float?
+  public var y: Swift.Float?
+  @discardableResult
+  public func align(_ prop: AAInfographics.AAChartAlignType?) -> AAInfographics.AAPosition
+  @discardableResult
+  public func verticalAlign(_ prop: AAInfographics.AAChartVerticalAlignType?) -> AAInfographics.AAPosition
+  @discardableResult
+  public func x(_ prop: Swift.Float?) -> AAInfographics.AAPosition
+  @discardableResult
+  public func y(_ prop: Swift.Float?) -> AAInfographics.AAPosition
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AACrosshair : AAInfographics.AAObject {
+  public var dashStyle: Swift.String?
+  public var color: Swift.String?
+  public var width: Swift.Float?
+  public var zIndex: Swift.Int?
+  @discardableResult
+  public func dashStyle(_ prop: AAInfographics.AAChartLineDashStyleType) -> AAInfographics.AACrosshair
+  @discardableResult
+  public func color(_ prop: Swift.String) -> AAInfographics.AACrosshair
+  @discardableResult
+  public func width(_ prop: Swift.Float) -> AAInfographics.AACrosshair
+  @discardableResult
+  public func zIndex(_ prop: Swift.Int) -> AAInfographics.AACrosshair
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AADataLabels : AAInfographics.AAObject {
+  public var enabled: Swift.Bool?
+  public var align: Swift.String?
+  public var style: AAInfographics.AAStyle?
+  public var format: Swift.String?
+  public var formatter: Swift.String?
+  public var rotation: Swift.Float?
+  public var allowOverlap: Swift.Bool?
+  public var useHTML: Swift.Bool?
+  public var distance: Any?
+  public var verticalAlign: Swift.String?
+  public var x: Swift.Float?
+  public var y: Swift.Float?
+  public var color: Swift.String?
+  public var backgroundColor: Swift.String?
+  public var borderColor: Swift.String?
+  public var borderRadius: Swift.Float?
+  public var borderWidth: Swift.Float?
+  public var shape: Swift.String?
+  public var crop: Swift.Bool?
+  public var inside: Swift.Bool?
+  public var overflow: Swift.String?
+  public var filter: AAInfographics.AAFilter?
+  public var textPath: AAInfographics.AATextPath?
+  public var softConnector: Swift.Bool?
+  public var connectorColor: Swift.String?
+  public var connectorPadding: Swift.Float?
+  public var connectorShape: Swift.String?
+  public var connectorWidth: Swift.Float?
+  public var crookDistance: Swift.String?
+  public var alignTo: Swift.String?
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func align(_ prop: AAInfographics.AAChartAlignType?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func style(_ prop: AAInfographics.AAStyle?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func format(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func formatter(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func rotation(_ prop: Swift.Float?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func allowOverlap(_ prop: Swift.Bool?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func useHTML(_ prop: Swift.Bool?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func distance(_ prop: Any?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func verticalAlign(_ prop: AAInfographics.AAChartVerticalAlignType?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func x(_ prop: Swift.Float?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func y(_ prop: Swift.Float?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func color(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func backgroundColor(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func borderColor(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func borderRadius(_ prop: Swift.Float?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func shape(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func crop(_ prop: Swift.Bool?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func inside(_ prop: Swift.Bool?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func overflow(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func softConnector(_ prop: Swift.Bool?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func filter(_ prop: AAInfographics.AAFilter?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func textPath(_ prop: AAInfographics.AATextPath?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func connectorColor(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func connectorPadding(_ prop: Swift.Float?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func connectorShape(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func connectorWidth(_ prop: Swift.Float?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func crookDistance(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  @discardableResult
+  public func alignTo(_ prop: Swift.String?) -> AAInfographics.AADataLabels
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAFilter : AAInfographics.AAObject {
+  public var property: Swift.String?
+  public var `operator`: Swift.String?
+  public var value: Swift.Float?
+  @discardableResult
+  public func property(_ prop: Swift.String?) -> AAInfographics.AAFilter
+  @discardableResult
+  public func `operator`(_ prop: Swift.String?) -> AAInfographics.AAFilter
+  @discardableResult
+  public func value(_ prop: Swift.Float?) -> AAInfographics.AAFilter
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AATextPath : AAInfographics.AAObject {
+  public var enabled: Swift.Bool?
+  public var attributes: [Swift.String : Any]?
+  public var value: Swift.Float?
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool?) -> AAInfographics.AATextPath
+  @discardableResult
+  public func attributes(_ prop: [Swift.String : Any]?) -> AAInfographics.AATextPath
+  public init()
+  @objc deinit
+}
+extension AAInfographics.AAStyle {
+  convenience public init(color: Swift.String?)
+  convenience public init(color: Swift.String?, fontSize: Swift.Float?)
+  convenience public init(color: Swift.String?, fontSize: Swift.Float?, weight: AAInfographics.AAChartFontWeightType?)
+  convenience public init(color: Swift.String?, fontSize: Swift.Float?, weight: AAInfographics.AAChartFontWeightType?, outline: Swift.String?)
+}
+extension Swift.String {
+  public func aa_toPureJSString() -> Swift.String
+}
+extension Swift.Array {
+  public func aa_toJSArray() -> Swift.String
+}
+extension AAInfographics.AAChartModel {
+  public func aa_toAAOptions() -> AAInfographics.AAOptions
+}
+public enum AALinearGradientDirection : Swift.Int {
+  case toTop
+  case toBottom
+  case toLeft
+  case toRight
+  case toTopLeft
+  case toTopRight
+  case toBottomLeft
+  case toBottomRight
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class AAGradientColor {
+  public class var oceanBlue: [Swift.String : Any] {
+    get
+  }
+  public class var sanguine: [Swift.String : Any] {
+    get
+  }
+  public class var lusciousLime: [Swift.String : Any] {
+    get
+  }
+  public class var purpleLake: [Swift.String : Any] {
+    get
+  }
+  public class var freshPapaya: [Swift.String : Any] {
+    get
+  }
+  public class var ultramarine: [Swift.String : Any] {
+    get
+  }
+  public class var pinkSugar: [Swift.String : Any] {
+    get
+  }
+  public class var lemonDrizzle: [Swift.String : Any] {
+    get
+  }
+  public class var victoriaPurple: [Swift.String : Any] {
+    get
+  }
+  public class var springGreens: [Swift.String : Any] {
+    get
+  }
+  public class var mysticMauve: [Swift.String : Any] {
+    get
+  }
+  public class var reflexSilver: [Swift.String : Any] {
+    get
+  }
+  public class var neonGlow: [Swift.String : Any] {
+    get
+  }
+  public class var berrySmoothie: [Swift.String : Any] {
+    get
+  }
+  public class var newLeaf: [Swift.String : Any] {
+    get
+  }
+  public class var cottonCandy: [Swift.String : Any] {
+    get
+  }
+  public class var pixieDust: [Swift.String : Any] {
+    get
+  }
+  public class var fizzyPeach: [Swift.String : Any] {
+    get
+  }
+  public class var sweetDream: [Swift.String : Any] {
+    get
+  }
+  public class var firebrick: [Swift.String : Any] {
+    get
+  }
+  public class var wroughtIron: [Swift.String : Any] {
+    get
+  }
+  public class var deepSea: [Swift.String : Any] {
+    get
+  }
+  public class var coastalBreeze: [Swift.String : Any] {
+    get
+  }
+  public class var eveningDelight: [Swift.String : Any] {
+    get
+  }
+  public class func oceanBlueColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func sanguineColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func lusciousLimeColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func purpleLakeColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func freshPapayaColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func ultramarineColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func pinkSugarColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func lemonDrizzleColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func victoriaPurpleColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func springGreensColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func mysticMauveColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func reflexSilverColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func neonGlowColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func berrySmoothieColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func newLeafColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func cottonCandyColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func pixieDustColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func fizzyPeachColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func sweetDreamColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func firebrickColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func wroughtIronColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func deepSeaColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func coastalBreezeColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func eveningDelightColor(_ direction: AAInfographics.AALinearGradientDirection) -> [Swift.String : Any]
+  public class func linearGradient(startColor: Swift.String, endColor: Swift.String) -> [Swift.String : Any]
+  public class func linearGradient(direction: AAInfographics.AALinearGradientDirection, startColor: Swift.String, endColor: Swift.String) -> [Swift.String : Any]
+  public class func linearGradient(direction: AAInfographics.AALinearGradientDirection, stops: [Any]) -> [Swift.String : Any]
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AALabel : AAInfographics.AAObject {
+  public var align: Swift.String?
+  public var rotation: Swift.Float?
+  public var text: Swift.String?
+  public var textAlign: Swift.String?
+  public var useHTML: Swift.Bool?
+  public var verticalAlign: Swift.String?
+  public var style: AAInfographics.AAStyle?
+  public var x: Swift.Float?
+  public var y: Swift.Float?
+  @discardableResult
+  public func align(_ prop: AAInfographics.AAChartAlignType) -> AAInfographics.AALabel
+  @discardableResult
+  public func rotation(_ prop: Swift.Float) -> AAInfographics.AALabel
+  @discardableResult
+  public func text(_ prop: Swift.String) -> AAInfographics.AALabel
+  @discardableResult
+  public func textAlign(_ prop: Swift.String) -> AAInfographics.AALabel
+  @discardableResult
+  public func useHTML(_ prop: Swift.Bool) -> AAInfographics.AALabel
+  @discardableResult
+  public func verticalAlign(_ prop: Swift.String) -> AAInfographics.AALabel
+  @discardableResult
+  public func style(_ prop: AAInfographics.AAStyle) -> AAInfographics.AALabel
+  @discardableResult
+  public func x(_ prop: Swift.Float) -> AAInfographics.AALabel
+  @discardableResult
+  public func y(_ prop: Swift.Float) -> AAInfographics.AALabel
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AALabels : AAInfographics.AAObject {
+  public var align: Swift.String?
+  public var autoRotation: Any?
+  public var autoRotationLimit: Swift.Float?
+  public var distance: Swift.Float?
+  public var enabled: Swift.Bool?
+  public var format: Swift.String?
+  public var formatter: Swift.String?
+  public var padding: Swift.Float?
+  public var rotation: Swift.Float?
+  public var staggerLines: Swift.Int?
+  public var step: Swift.Int?
+  public var style: AAInfographics.AAStyle?
+  public var x: Swift.Float?
+  public var y: Swift.Float?
+  public var useHTML: Swift.Bool?
+  @discardableResult
+  public func align(_ prop: AAInfographics.AAChartAlignType?) -> AAInfographics.AALabels
+  @discardableResult
+  public func autoRotation(_ prop: Any?) -> AAInfographics.AALabels
+  @discardableResult
+  public func autoRotationLimit(_ prop: Swift.Float?) -> AAInfographics.AALabels
+  @discardableResult
+  public func distance(_ prop: Swift.Float?) -> AAInfographics.AALabels
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool?) -> AAInfographics.AALabels
+  @discardableResult
+  public func format(_ prop: Swift.String?) -> AAInfographics.AALabels
+  @discardableResult
+  public func formatter(_ prop: Swift.String?) -> AAInfographics.AALabels
+  @discardableResult
+  public func padding(_ prop: Swift.Float?) -> AAInfographics.AALabels
+  @discardableResult
+  public func rotation(_ prop: Swift.Float?) -> AAInfographics.AALabels
+  @discardableResult
+  public func staggerLines(_ prop: Swift.Int?) -> AAInfographics.AALabels
+  @discardableResult
+  public func step(_ prop: Swift.Int?) -> AAInfographics.AALabels
+  @discardableResult
+  public func style(_ prop: AAInfographics.AAStyle?) -> AAInfographics.AALabels
+  @discardableResult
+  public func x(_ prop: Swift.Float?) -> AAInfographics.AALabels
+  @discardableResult
+  public func y(_ prop: Swift.Float?) -> AAInfographics.AALabels
+  @discardableResult
+  public func useHTML(_ prop: Swift.Bool?) -> AAInfographics.AALabels
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AALang : AAInfographics.AAObject {
+  public var noData: Swift.String?
+  public var numericSymbolMagnitude: Swift.Int?
+  public var numericSymbols: [Swift.String]?
+  public var resetZoom: Swift.String?
+  public var thousandsSep: Swift.String?
+  @discardableResult
+  public func noData(_ prop: Swift.String?) -> AAInfographics.AALang
+  @discardableResult
+  public func numericSymbolMagnitude(_ prop: Swift.Int?) -> AAInfographics.AALang
+  @discardableResult
+  public func numericSymbols(_ prop: [Swift.String]?) -> AAInfographics.AALang
+  @discardableResult
+  public func resetZoom(_ prop: Swift.String?) -> AAInfographics.AALang
+  @discardableResult
+  public func thousandsSep(_ prop: Swift.String?) -> AAInfographics.AALang
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AALegend : AAInfographics.AAObject {
+  public var layout: Swift.String?
+  public var align: Swift.String?
+  public var verticalAlign: Swift.String?
+  public var enabled: Swift.Bool?
+  public var borderColor: Swift.String?
+  public var borderWidth: Swift.Float?
+  public var itemMarginTop: Swift.Float?
+  public var itemMarginBottom: Swift.Float?
+  public var itemStyle: AAInfographics.AAItemStyle?
+  public var symbolHeight: Swift.Float?
+  public var symbolPadding: Swift.Float?
+  public var symbolRadius: Swift.Float?
+  public var symbolWidth: Swift.Float?
+  public var x: Swift.Float?
+  public var y: Swift.Float?
+  public var floating: Swift.Bool?
+  @discardableResult
+  public func layout(_ prop: AAInfographics.AAChartLayoutType?) -> AAInfographics.AALegend
+  @discardableResult
+  public func align(_ prop: AAInfographics.AAChartAlignType?) -> AAInfographics.AALegend
+  @discardableResult
+  public func verticalAlign(_ prop: AAInfographics.AAChartVerticalAlignType?) -> AAInfographics.AALegend
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool?) -> AAInfographics.AALegend
+  @discardableResult
+  public func borderColor(_ prop: Swift.String?) -> AAInfographics.AALegend
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float?) -> AAInfographics.AALegend
+  @discardableResult
+  public func itemMarginTop(_ prop: Swift.Float?) -> AAInfographics.AALegend
+  @discardableResult
+  public func itemStyle(_ prop: AAInfographics.AAItemStyle?) -> AAInfographics.AALegend
+  @discardableResult
+  public func symbolHeight(_ prop: Swift.Float?) -> AAInfographics.AALegend
+  @discardableResult
+  public func symbolPadding(_ prop: Swift.Float?) -> AAInfographics.AALegend
+  @discardableResult
+  public func symbolRadius(_ prop: Swift.Float?) -> AAInfographics.AALegend
+  @discardableResult
+  public func x(_ prop: Swift.Float?) -> AAInfographics.AALegend
+  @discardableResult
+  public func symbolWidth(_ prop: Swift.Float?) -> AAInfographics.AALegend
+  @discardableResult
+  public func y(_ prop: Swift.Float?) -> AAInfographics.AALegend
+  @discardableResult
+  public func floating(_ prop: Swift.Bool?) -> AAInfographics.AALegend
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAItemStyle : AAInfographics.AAObject {
+  public var color: Swift.String?
+  public var cursor: Swift.String?
+  public var pointer: Swift.String?
+  public var fontSize: Swift.String?
+  public var fontWeight: AAInfographics.AAChartFontWeightType?
+  @discardableResult
+  public func color(_ prop: Swift.String?) -> AAInfographics.AAItemStyle
+  @discardableResult
+  public func cursor(_ prop: Swift.String?) -> AAInfographics.AAItemStyle
+  @discardableResult
+  public func pointer(_ prop: Swift.String?) -> AAInfographics.AAItemStyle
+  @discardableResult
+  public func fontSize(_ prop: Swift.Float?) -> AAInfographics.AAItemStyle
+  @discardableResult
+  public func fontWeight(_ prop: AAInfographics.AAChartFontWeightType?) -> AAInfographics.AAItemStyle
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAMarker : AAInfographics.AAObject {
+  public var enabled: Swift.Bool?
+  public var radius: Swift.Float?
+  public var symbol: Swift.String?
+  public var fillColor: Swift.String?
+  public var lineWidth: Swift.Float?
+  public var lineColor: Any?
+  public var states: AAInfographics.AAMarkerStates?
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool?) -> AAInfographics.AAMarker
+  @discardableResult
+  public func radius(_ prop: Swift.Float?) -> AAInfographics.AAMarker
+  @discardableResult
+  public func symbol(_ prop: Swift.String?) -> AAInfographics.AAMarker
+  @discardableResult
+  public func fillColor(_ prop: Swift.String?) -> AAInfographics.AAMarker
+  @discardableResult
+  public func lineWidth(_ prop: Swift.Float?) -> AAInfographics.AAMarker
+  @discardableResult
+  public func lineColor(_ prop: Any?) -> AAInfographics.AAMarker
+  @discardableResult
+  public func states(_ prop: AAInfographics.AAMarkerStates?) -> AAInfographics.AAMarker
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAMarkerStates : AAInfographics.AAObject {
+  public var hover: AAInfographics.AAMarkerHover?
+  @discardableResult
+  public func hover(_ prop: AAInfographics.AAMarkerHover) -> AAInfographics.AAMarkerStates
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAMarkerHover : AAInfographics.AAObject {
+  public var enabled: Swift.Bool?
+  public var fillColor: Swift.String?
+  public var lineColor: Swift.String?
+  public var lineWidth: Swift.Float?
+  public var radius: Swift.Float?
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool) -> AAInfographics.AAMarkerHover
+  @discardableResult
+  public func fillColor(_ prop: Swift.String) -> AAInfographics.AAMarkerHover
+  @discardableResult
+  public func lineColor(_ prop: Swift.String) -> AAInfographics.AAMarkerHover
+  @discardableResult
+  public func lineWidth(_ prop: Swift.Float) -> AAInfographics.AAMarkerHover
+  @discardableResult
+  public func radius(_ prop: Swift.Float) -> AAInfographics.AAMarkerHover
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAOptions : AAInfographics.AAObject {
+  public var chart: AAInfographics.AAChart?
+  public var title: AAInfographics.AATitle?
+  public var subtitle: AAInfographics.AASubtitle?
+  public var xAxis: AAInfographics.AAXAxis?
+  public var yAxis: AAInfographics.AAYAxis?
+  public var xAxisArray: [AAInfographics.AAXAxis]?
+  public var yAxisArray: [AAInfographics.AAYAxis]?
+  public var tooltip: AAInfographics.AATooltip?
+  public var plotOptions: AAInfographics.AAPlotOptions?
+  public var series: [Any]?
+  public var legend: AAInfographics.AALegend?
+  public var pane: AAInfographics.AAPane?
+  public var colors: [Any]?
+  public var credits: AAInfographics.AACredits?
+  public var defaultOptions: AAInfographics.AALang?
+  public var clickEventEnabled: Swift.Bool?
+  public var touchEventEnabled: Swift.Bool?
+  @discardableResult
+  public func chart(_ prop: AAInfographics.AAChart?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func title(_ prop: AAInfographics.AATitle?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func subtitle(_ prop: AAInfographics.AASubtitle?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func xAxis(_ prop: AAInfographics.AAXAxis?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func yAxis(_ prop: AAInfographics.AAYAxis?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func xAxisArray(_ prop: [AAInfographics.AAXAxis]?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func yAxisArray(_ prop: [AAInfographics.AAYAxis]?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func tooltip(_ prop: AAInfographics.AATooltip?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func plotOptions(_ prop: AAInfographics.AAPlotOptions?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func series(_ prop: [Any]?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func legend(_ prop: AAInfographics.AALegend?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func pane(_ prop: AAInfographics.AAPane?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func colors(_ prop: [Any]?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func credits(_ prop: AAInfographics.AACredits?) -> AAInfographics.AAOptions
+  @discardableResult
+  public func defaultOptions(_ prop: AAInfographics.AALang?) -> AAInfographics.AAOptions
+  public init()
+  @available(*, unavailable, message: "This setter function is useless now, please remove it directly")
+  public func touchEventEnabled(_ prop: Swift.Bool?) -> AAInfographics.AAOptions
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AAOptionsConstructor {
+  public static func configureChartOptions(_ aaChartModel: AAInfographics.AAChartModel) -> AAInfographics.AAOptions
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAPane : AAInfographics.AAObject {
+  public var background: [AAInfographics.AABackgroundElement]?
+  public var center: [Swift.String]?
+  public var endAngle: Swift.Float?
+  public var size: Any?
+  public var startAngle: Swift.Float?
+  @discardableResult
+  public func background(_ prop: [AAInfographics.AABackgroundElement]) -> AAInfographics.AAPane
+  @discardableResult
+  public func center(_ prop: [Swift.String]) -> AAInfographics.AAPane
+  @discardableResult
+  public func endAngle(_ prop: Swift.Float) -> AAInfographics.AAPane
+  @discardableResult
+  public func size(_ prop: Any) -> AAInfographics.AAPane
+  @discardableResult
+  public func startAngle(_ prop: Swift.Float) -> AAInfographics.AAPane
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AABackgroundElement : AAInfographics.AAObject {
+  public var backgroundColor: Any?
+  public var borderColor: Swift.String?
+  public var borderWidth: Swift.Float?
+  public var className: Swift.String?
+  public var innerRadius: Any?
+  public var outerRadius: Any?
+  public var shape: Swift.String?
+  @discardableResult
+  public func backgroundColor(_ prop: Any) -> AAInfographics.AABackgroundElement
+  @discardableResult
+  public func borderColor(_ prop: Swift.String) -> AAInfographics.AABackgroundElement
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float) -> AAInfographics.AABackgroundElement
+  @discardableResult
+  public func className(_ prop: Swift.String) -> AAInfographics.AABackgroundElement
+  @discardableResult
+  public func innerRadius(_ prop: Any) -> AAInfographics.AABackgroundElement
+  @discardableResult
+  public func outerRadius(_ prop: Any) -> AAInfographics.AABackgroundElement
+  @discardableResult
+  public func shape(_ prop: Swift.String) -> AAInfographics.AABackgroundElement
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAPlotBandsElement : AAInfographics.AAObject {
+  public var from: Swift.Double?
+  public var to: Swift.Double?
+  public var color: Any?
+  public var borderColor: Swift.String?
+  public var borderWidth: Swift.Float?
+  public var className: Swift.String?
+  public var label: AAInfographics.AALabel?
+  public var zIndex: Swift.Int?
+  public var outerRadius: Swift.String?
+  public var thickness: Swift.String?
+  @discardableResult
+  public func from(_ prop: Swift.Double) -> AAInfographics.AAPlotBandsElement
+  @discardableResult
+  public func to(_ prop: Swift.Double) -> AAInfographics.AAPlotBandsElement
+  @discardableResult
+  public func color(_ prop: Any) -> AAInfographics.AAPlotBandsElement
+  @discardableResult
+  public func borderColor(_ prop: Swift.String) -> AAInfographics.AAPlotBandsElement
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float) -> AAInfographics.AAPlotBandsElement
+  @discardableResult
+  public func className(_ prop: Swift.String) -> AAInfographics.AAPlotBandsElement
+  @discardableResult
+  public func label(_ prop: AAInfographics.AALabel) -> AAInfographics.AAPlotBandsElement
+  @discardableResult
+  public func zIndex(_ prop: Swift.Int) -> AAInfographics.AAPlotBandsElement
+  @discardableResult
+  public func outerRadius(_ prop: Swift.String) -> AAInfographics.AAPlotBandsElement
+  @discardableResult
+  public func thickness(_ prop: Swift.String) -> AAInfographics.AAPlotBandsElement
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAPlotLinesElement : AAInfographics.AAObject {
+  public var color: Any?
+  public var dashStyle: Swift.String?
+  public var width: Swift.Float?
+  public var value: Swift.Double?
+  public var zIndex: Swift.Int?
+  public var label: AAInfographics.AALabel?
+  @discardableResult
+  public func color(_ prop: Any) -> AAInfographics.AAPlotLinesElement
+  @discardableResult
+  public func dashStyle(_ prop: AAInfographics.AAChartLineDashStyleType) -> AAInfographics.AAPlotLinesElement
+  @discardableResult
+  public func width(_ prop: Swift.Float) -> AAInfographics.AAPlotLinesElement
+  @discardableResult
+  public func value(_ prop: Swift.Double) -> AAInfographics.AAPlotLinesElement
+  @discardableResult
+  public func zIndex(_ prop: Swift.Int) -> AAInfographics.AAPlotLinesElement
+  @discardableResult
+  public func label(_ prop: AAInfographics.AALabel) -> AAInfographics.AAPlotLinesElement
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAPlotOptions : AAInfographics.AAObject {
+  public var column: AAInfographics.AAColumn?
+  public var bar: AAInfographics.AABar?
+  public var line: AAInfographics.AALine?
+  public var spline: AAInfographics.AASpline?
+  public var area: AAInfographics.AAArea?
+  public var areaspline: AAInfographics.AAAreaspline?
+  public var pie: AAInfographics.AAPie?
+  public var bubble: AAInfographics.AABubble?
+  public var columnrange: AAInfographics.AAColumnrange?
+  public var arearange: AAInfographics.AAArearange?
+  public var series: AAInfographics.AASeries?
+  @discardableResult
+  public func column(_ prop: AAInfographics.AAColumn) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func bar(_ prop: AAInfographics.AABar) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func line(_ prop: AAInfographics.AALine) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func spline(_ prop: AAInfographics.AASpline) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func area(_ prop: AAInfographics.AAArea) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func areaspline(_ prop: AAInfographics.AAAreaspline) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func pie(_ prop: AAInfographics.AAPie) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func bubble(_ prop: AAInfographics.AABubble) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func columnrange(_ prop: AAInfographics.AAColumnrange) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func arearange(_ prop: AAInfographics.AAArearange) -> AAInfographics.AAPlotOptions
+  @discardableResult
+  public func series(_ prop: AAInfographics.AASeries) -> AAInfographics.AAPlotOptions
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAColumn : AAInfographics.AAObject {
+  public var name: Swift.String?
+  public var data: [Any]?
+  public var color: Swift.String?
+  public var grouping: Swift.Bool?
+  public var pointPadding: Swift.Float?
+  public var pointPlacement: Swift.Float?
+  public var groupPadding: Swift.Float?
+  public var borderWidth: Swift.Float?
+  public var colorByPoint: Swift.Bool?
+  public var dataLabels: AAInfographics.AADataLabels?
+  public var stacking: Swift.String?
+  public var borderRadius: Swift.Float?
+  public var yAxis: Swift.Float?
+  @discardableResult
+  public func name(_ prop: Swift.String) -> AAInfographics.AAColumn
+  @discardableResult
+  public func data(_ prop: [Any]) -> AAInfographics.AAColumn
+  @discardableResult
+  public func color(_ prop: Swift.String) -> AAInfographics.AAColumn
+  @discardableResult
+  public func grouping(_ prop: Swift.Bool?) -> AAInfographics.AAColumn
+  @discardableResult
+  public func pointPadding(_ prop: Swift.Float?) -> AAInfographics.AAColumn
+  @discardableResult
+  public func pointPlacement(_ prop: Swift.Float?) -> AAInfographics.AAColumn
+  @discardableResult
+  public func groupPadding(_ prop: Swift.Float?) -> AAInfographics.AAColumn
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float?) -> AAInfographics.AAColumn
+  @discardableResult
+  public func colorByPoint(_ prop: Swift.Bool?) -> AAInfographics.AAColumn
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AAColumn
+  @discardableResult
+  public func stacking(_ prop: Swift.String) -> AAInfographics.AAColumn
+  @discardableResult
+  public func borderRadius(_ prop: Swift.Float?) -> AAInfographics.AAColumn
+  @discardableResult
+  public func yAxis(_ prop: Swift.Float?) -> AAInfographics.AAColumn
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AABar : AAInfographics.AAObject {
+  public var name: Swift.String?
+  public var data: [Any]?
+  public var color: Swift.String?
+  public var grouping: Swift.Bool?
+  public var pointPadding: Swift.Float?
+  public var pointPlacement: Swift.Float?
+  public var groupPadding: Swift.Float?
+  public var borderWidth: Swift.Float?
+  public var colorByPoint: Swift.Bool?
+  public var dataLabels: AAInfographics.AADataLabels?
+  public var stacking: Swift.String?
+  public var borderRadius: Swift.Float?
+  public var yAxis: Swift.Float?
+  @discardableResult
+  public func name(_ prop: Swift.String) -> AAInfographics.AABar
+  @discardableResult
+  public func data(_ prop: [Any]) -> AAInfographics.AABar
+  @discardableResult
+  public func color(_ prop: Swift.String) -> AAInfographics.AABar
+  @discardableResult
+  public func grouping(_ prop: Swift.Bool?) -> AAInfographics.AABar
+  @discardableResult
+  public func pointPadding(_ prop: Swift.Float?) -> AAInfographics.AABar
+  @discardableResult
+  public func pointPlacement(_ prop: Swift.Float?) -> AAInfographics.AABar
+  @discardableResult
+  public func groupPadding(_ prop: Swift.Float?) -> AAInfographics.AABar
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float?) -> AAInfographics.AABar
+  @discardableResult
+  public func colorByPoint(_ prop: Swift.Bool?) -> AAInfographics.AABar
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AABar
+  @discardableResult
+  public func stacking(_ prop: Swift.String) -> AAInfographics.AABar
+  @discardableResult
+  public func borderRadius(_ prop: Swift.Float?) -> AAInfographics.AABar
+  @discardableResult
+  public func yAxis(_ prop: Swift.Float?) -> AAInfographics.AABar
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AALine : AAInfographics.AAObject {
+  public var dataLabels: AAInfographics.AADataLabels?
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AALine
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AASpline : AAInfographics.AAObject {
+  public var dataLabels: AAInfographics.AADataLabels?
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AASpline
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAArea : AAInfographics.AAObject {
+  public var dataLabels: AAInfographics.AADataLabels?
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AAArea
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAAreaspline : AAInfographics.AAObject {
+  public var dataLabels: AAInfographics.AADataLabels?
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AAAreaspline
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAPie : AAInfographics.AAObject {
+  public var type: Swift.String?
+  public var data: [Any]?
+  public var dataLabels: AAInfographics.AADataLabels?
+  public var size: Swift.Float?
+  public var allowPointSelect: Swift.Bool?
+  public var cursor: Swift.String?
+  public var showInLegend: Swift.Bool?
+  public var startAngle: Swift.Float?
+  public var endAngle: Swift.Float?
+  public var depth: Swift.Float?
+  public var center: [Swift.Int]?
+  @discardableResult
+  public func type(_ prop: AAInfographics.AAChartType) -> AAInfographics.AAPie
+  @discardableResult
+  public func data(_ prop: [Any]) -> AAInfographics.AAPie
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AAPie
+  @discardableResult
+  public func size(_ prop: Swift.Float?) -> AAInfographics.AAPie
+  @discardableResult
+  public func allowPointSelect(_ prop: Swift.Bool?) -> AAInfographics.AAPie
+  @discardableResult
+  public func cursor(_ prop: Swift.String) -> AAInfographics.AAPie
+  @discardableResult
+  public func showInLegend(_ prop: Swift.Bool?) -> AAInfographics.AAPie
+  @discardableResult
+  public func startAngle(_ prop: Swift.Float?) -> AAInfographics.AAPie
+  @discardableResult
+  public func endAngle(_ prop: Swift.Float?) -> AAInfographics.AAPie
+  @discardableResult
+  public func depth(_ prop: Swift.Float?) -> AAInfographics.AAPie
+  @discardableResult
+  public func center(_ prop: [Swift.Int]?) -> AAInfographics.AAPie
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AABubble : AAInfographics.AAObject {
+  public var minSize: Any?
+  public var maxSize: Any?
+  public var zMin: Swift.Float?
+  public var zMax: Swift.Float?
+  public var dataLabels: AAInfographics.AADataLabels?
+  @discardableResult
+  public func minSize(_ prop: Any?) -> AAInfographics.AABubble
+  @discardableResult
+  public func maxSize(_ prop: Any?) -> AAInfographics.AABubble
+  @discardableResult
+  public func zMin(_ prop: Swift.Float?) -> AAInfographics.AABubble
+  @discardableResult
+  public func zMax(_ prop: Swift.Float?) -> AAInfographics.AABubble
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels?) -> AAInfographics.AABubble
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAColumnrange : AAInfographics.AAObject {
+  public var borderRadius: Swift.Float?
+  public var borderWidth: Swift.Float?
+  public var dataLabels: AAInfographics.AADataLabels?
+  public var groupPadding: Swift.Float?
+  public var grouping: Swift.Bool?
+  public var pointPadding: Swift.Float?
+  public var pointPlacement: Swift.Float?
+  @discardableResult
+  public func borderRadius(_ prop: Swift.Float?) -> AAInfographics.AAColumnrange
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float?) -> AAInfographics.AAColumnrange
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels?) -> AAInfographics.AAColumnrange
+  @discardableResult
+  public func groupPadding(_ prop: Swift.Float?) -> AAInfographics.AAColumnrange
+  @discardableResult
+  public func grouping(_ prop: Swift.Bool?) -> AAInfographics.AAColumnrange
+  @discardableResult
+  public func pointPadding(_ prop: Swift.Float?) -> AAInfographics.AAColumnrange
+  @discardableResult
+  public func pointPlacement(_ prop: Swift.Float?) -> AAInfographics.AAColumnrange
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAArearange : AAInfographics.AAObject {
+  public var dataLabels: AAInfographics.AADataLabels?
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AAArearange
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAScrollablePlotArea : AAInfographics.AAObject {
+  public var minHeight: Swift.Int?
+  public var minWidth: Swift.Int?
+  public var opacity: Swift.Float?
+  public var scrollPositionX: Swift.Float?
+  public var scrollPositionY: Swift.Float?
+  @discardableResult
+  public func minHeight(_ prop: Swift.Int) -> AAInfographics.AAScrollablePlotArea
+  @discardableResult
+  public func minWidth(_ prop: Swift.Int) -> AAInfographics.AAScrollablePlotArea
+  @discardableResult
+  public func opacity(_ prop: Swift.Float) -> AAInfographics.AAScrollablePlotArea
+  @discardableResult
+  public func scrollPositionX(_ prop: Swift.Float) -> AAInfographics.AAScrollablePlotArea
+  @discardableResult
+  public func scrollPositionY(_ prop: Swift.Float) -> AAInfographics.AAScrollablePlotArea
+  public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AAObject {
+  @objc deinit
+}
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+extension AAInfographics.AAObject {
+  public var classNameString: Swift.String {
+    get
+  }
+}
+@available(iOS 10.0, macCatalyst 13.1, macOS 10.13, *)
+extension AAInfographics.AAObject {
+  public func toDic() -> [Swift.String : Any]?
+  public func toJSON() -> Swift.String?
+}
+@_inheritsConvenienceInitializers public class AASeries : AAInfographics.AAObject {
+  public var borderColor: Swift.String?
+  public var borderWidth: Swift.Float?
+  public var borderRadius: Swift.Float?
+  public var borderRadiusTopLeft: Any?
+  public var borderRadiusTopRight: Any?
+  public var borderRadiusBottomLeft: Any?
+  public var borderRadiusBottomRight: Any?
+  public var marker: AAInfographics.AAMarker?
+  public var stacking: Swift.String?
+  public var animation: AAInfographics.AAAnimation?
+  public var keys: [Swift.String]?
+  public var colorByPoint: Swift.Bool?
+  public var connectNulls: Swift.Bool?
+  public var events: AAInfographics.AAEvents?
+  public var shadow: AAInfographics.AAShadow?
+  public var dataLabels: AAInfographics.AADataLabels?
+  public var states: AAInfographics.AAStates?
+  public var allowPointSelect: Swift.Bool?
+  public var point: AAInfographics.AAPoint?
+  public var pointInterval: Swift.Float?
+  public var pointIntervalUnit: Swift.String?
+  public var pointPlacement: Any?
+  public var pointStart: Swift.Float?
+  public var pointPadding: Swift.Float?
+  public var groupPadding: Swift.Float?
+  @discardableResult
+  public func borderColor(_ prop: Swift.String) -> AAInfographics.AASeries
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float) -> AAInfographics.AASeries
+  @discardableResult
+  public func borderRadius(_ prop: Swift.Float?) -> AAInfographics.AASeries
+  @discardableResult
+  public func borderRadiusTopLeft(_ prop: Any?) -> AAInfographics.AASeries
+  @discardableResult
+  public func borderRadiusTopRight(_ prop: Any?) -> AAInfographics.AASeries
+  @discardableResult
+  public func borderRadiusBottomLeft(_ prop: Any?) -> AAInfographics.AASeries
+  @discardableResult
+  public func borderRadiusBottomRight(_ prop: Any?) -> AAInfographics.AASeries
+  @discardableResult
+  public func marker(_ prop: AAInfographics.AAMarker?) -> AAInfographics.AASeries
+  @discardableResult
+  public func stacking(_ prop: AAInfographics.AAChartStackingType?) -> AAInfographics.AASeries
+  @discardableResult
+  public func animation(_ prop: AAInfographics.AAAnimation?) -> AAInfographics.AASeries
+  @discardableResult
+  public func keys(_ prop: [Swift.String]?) -> AAInfographics.AASeries
+  @discardableResult
+  public func colorByPoint(_ prop: Swift.Bool?) -> AAInfographics.AASeries
+  @discardableResult
+  public func connectNulls(_ prop: Swift.Bool?) -> AAInfographics.AASeries
+  @discardableResult
+  public func events(_ prop: AAInfographics.AAEvents?) -> AAInfographics.AASeries
+  @discardableResult
+  public func shadow(_ prop: AAInfographics.AAShadow?) -> AAInfographics.AASeries
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels?) -> AAInfographics.AASeries
+  @discardableResult
+  public func states(_ prop: AAInfographics.AAStates?) -> AAInfographics.AASeries
+  @discardableResult
+  public func point(_ prop: AAInfographics.AAPoint?) -> AAInfographics.AASeries
+  @discardableResult
+  public func pointInterval(_ prop: Swift.Float?) -> AAInfographics.AASeries
+  @discardableResult
+  public func pointIntervalUnit(_ prop: Swift.String?) -> AAInfographics.AASeries
+  @discardableResult
+  public func pointPlacement(_ prop: Any?) -> AAInfographics.AASeries
+  @discardableResult
+  public func pointStart(_ prop: Swift.Float?) -> AAInfographics.AASeries
+  @discardableResult
+  public func pointPadding(_ prop: Swift.Float?) -> AAInfographics.AASeries
+  @discardableResult
+  public func groupPadding(_ prop: Swift.Float?) -> AAInfographics.AASeries
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAEvents : AAInfographics.AAObject {
+  public var click: Swift.String?
+  public var mouseOver: Swift.String?
+  public var mouseOut: Swift.String?
+  public var legendItemClick: Swift.String?
+  @discardableResult
+  public func click(_ prop: Swift.String?) -> AAInfographics.AAEvents
+  @discardableResult
+  public func mouseOver(_ prop: Swift.String?) -> AAInfographics.AAEvents
+  @discardableResult
+  public func mouseOut(_ prop: Swift.String?) -> AAInfographics.AAEvents
+  @discardableResult
+  public func legendItemClick(_ prop: Swift.String?) -> AAInfographics.AAEvents
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAPoint : AAInfographics.AAObject {
+  public var events: AAInfographics.AAPointEvents?
+  @discardableResult
+  public func events(_ prop: AAInfographics.AAPointEvents?) -> AAInfographics.AAPoint
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAPointEvents : AAInfographics.AAObject {
+  public var click: Swift.String?
+  public var mouseOver: Swift.String?
+  public var mouseOut: Swift.String?
+  public var remove: Swift.String?
+  public var select: Swift.String?
+  public var unselect: Swift.String?
+  public var update: Swift.String?
+  @discardableResult
+  public func click(_ prop: Swift.String?) -> AAInfographics.AAPointEvents
+  @discardableResult
+  public func mouseOver(_ prop: Swift.String?) -> AAInfographics.AAPointEvents
+  @discardableResult
+  public func mouseOut(_ prop: Swift.String?) -> AAInfographics.AAPointEvents
+  @discardableResult
+  public func remove(_ prop: Swift.String?) -> AAInfographics.AAPointEvents
+  @discardableResult
+  public func select(_ prop: Swift.String?) -> AAInfographics.AAPointEvents
+  @discardableResult
+  public func unselect(_ prop: Swift.String?) -> AAInfographics.AAPointEvents
+  @discardableResult
+  public func update(_ prop: Swift.String?) -> AAInfographics.AAPointEvents
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AASeriesElement : AAInfographics.AAObject {
+  public var type: Swift.String?
+  public var name: Swift.String?
+  public var data: [Any]?
+  public var color: Any?
+  public var colors: [Any]?
+  public var lineWidth: Swift.Float?
+  public var borderColor: Swift.String?
+  public var borderWidth: Swift.Float?
+  public var borderRadius: Swift.Float?
+  public var borderRadiusTopLeft: Any?
+  public var borderRadiusTopRight: Any?
+  public var borderRadiusBottomLeft: Any?
+  public var borderRadiusBottomRight: Any?
+  public var fillColor: Any?
+  public var fillOpacity: Swift.Float?
+  public var threshold: Swift.Float?
+  public var negativeColor: Any?
+  public var negativeFillColor: Any?
+  public var dashStyle: Swift.String?
+  public var xAxis: Swift.Int?
+  public var yAxis: Swift.Int?
+  public var dataLabels: AAInfographics.AADataLabels?
+  public var marker: AAInfographics.AAMarker?
+  public var step: Any?
+  public var states: AAInfographics.AAStates?
+  public var showInLegend: Swift.Bool?
+  public var colorByPoint: Swift.Bool?
+  public var allowPointSelect: Swift.Bool?
+  public var zIndex: Swift.Int?
+  public var size: Any?
+  public var innerSize: Any?
+  public var minSize: Any?
+  public var shadow: AAInfographics.AAShadow?
+  public var zones: [AAInfographics.AAZonesElement]?
+  public var zoneAxis: Swift.String?
+  public var stack: Swift.String?
+  public var tooltip: AAInfographics.AATooltip?
+  public var pointPlacement: Any?
+  public var enableMouseTracking: Swift.Bool?
+  public var dataSorting: AAInfographics.AADataSorting?
+  public var reversed: Swift.Bool?
+  @discardableResult
+  public func type(_ prop: AAInfographics.AAChartType) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func name(_ prop: Swift.String) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func data(_ prop: [Any]) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func lineWidth(_ prop: Swift.Float) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func borderColor(_ prop: Swift.String) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func borderRadius(_ prop: Swift.Float) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func borderRadiusTopLeft(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func borderRadiusTopRight(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func borderRadiusBottomLeft(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func borderRadiusBottomRight(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func fillColor(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func color(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func colors(_ prop: [Any]) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func fillOpacity(_ prop: Swift.Float) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func threshold(_ prop: Swift.Float) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func negativeColor(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func negativeFillColor(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func dashStyle(_ prop: AAInfographics.AAChartLineDashStyleType) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func xAxis(_ prop: Swift.Int) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func yAxis(_ prop: Swift.Int) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func marker(_ prop: AAInfographics.AAMarker) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func step(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func states(_ prop: AAInfographics.AAStates) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func showInLegend(_ prop: Swift.Bool) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func colorByPoint(_ prop: Swift.Bool) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func allowPointSelect(_ prop: Swift.Bool) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func zIndex(_ prop: Swift.Int) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func size(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func innerSize(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func minSize(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func shadow(_ prop: AAInfographics.AAShadow) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func zones(_ prop: [AAInfographics.AAZonesElement]) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func zoneAxis(_ prop: Swift.String) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func stack(_ prop: Swift.String) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func tooltip(_ prop: AAInfographics.AATooltip) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func pointPlacement(_ prop: Any) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func enableMouseTracking(_ prop: Swift.Bool) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func dataSorting(_ prop: AAInfographics.AADataSorting) -> AAInfographics.AASeriesElement
+  @discardableResult
+  public func reversed(_ prop: Swift.Bool) -> AAInfographics.AASeriesElement
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AADataElement : AAInfographics.AAObject {
+  public var name: Swift.String?
+  public var x: Swift.Float?
+  public var y: Swift.Float?
+  public var color: Any?
+  public var dataLabels: AAInfographics.AADataLabels?
+  public var marker: AAInfographics.AAMarker?
+  @discardableResult
+  public func name(_ prop: Swift.String) -> AAInfographics.AADataElement
+  @discardableResult
+  public func x(_ prop: Swift.Float) -> AAInfographics.AADataElement
+  @discardableResult
+  public func y(_ prop: Swift.Float) -> AAInfographics.AADataElement
+  @discardableResult
+  public func color(_ prop: Any) -> AAInfographics.AADataElement
+  @discardableResult
+  public func dataLabels(_ prop: AAInfographics.AADataLabels) -> AAInfographics.AADataElement
+  @discardableResult
+  public func marker(_ prop: AAInfographics.AAMarker) -> AAInfographics.AADataElement
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAShadow : AAInfographics.AAObject {
+  public var color: Swift.String?
+  public var offsetX: Swift.Float?
+  public var offsetY: Swift.Float?
+  public var opacity: Swift.Float?
+  public var width: Swift.Float?
+  @discardableResult
+  public func color(_ prop: Swift.String) -> AAInfographics.AAShadow
+  @discardableResult
+  public func offsetX(_ prop: Swift.Float) -> AAInfographics.AAShadow
+  @discardableResult
+  public func offsetY(_ prop: Swift.Float) -> AAInfographics.AAShadow
+  @discardableResult
+  public func opacity(_ prop: Swift.Float) -> AAInfographics.AAShadow
+  @discardableResult
+  public func width(_ prop: Swift.Float) -> AAInfographics.AAShadow
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAZonesElement : AAInfographics.AAObject {
+  public var value: Swift.Double?
+  public var color: Any?
+  public var fillColor: Any?
+  public var dashStyle: Swift.String?
+  @discardableResult
+  public func value(_ prop: Swift.Double) -> AAInfographics.AAZonesElement
+  @discardableResult
+  public func color(_ prop: Any) -> AAInfographics.AAZonesElement
+  @discardableResult
+  public func fillColor(_ prop: Any) -> AAInfographics.AAZonesElement
+  @discardableResult
+  public func dashStyle(_ prop: AAInfographics.AAChartLineDashStyleType) -> AAInfographics.AAZonesElement
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AADataSorting : AAInfographics.AAObject {
+  public var enabled: Swift.Bool?
+  public var matchByName: Swift.Bool?
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool) -> AAInfographics.AADataSorting
+  @discardableResult
+  public func matchByName(_ prop: Swift.Bool) -> AAInfographics.AADataSorting
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAStates : AAInfographics.AAObject {
+  public var hover: AAInfographics.AAHover?
+  public var select: AAInfographics.AASelect?
+  public var inactive: AAInfographics.AAInactive?
+  @discardableResult
+  public func hover(_ prop: AAInfographics.AAHover) -> AAInfographics.AAStates
+  @discardableResult
+  public func select(_ prop: AAInfographics.AASelect) -> AAInfographics.AAStates
+  @discardableResult
+  public func inactive(_ prop: AAInfographics.AAInactive) -> AAInfographics.AAStates
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAHover : AAInfographics.AAObject {
+  public var enabled: Swift.Bool?
+  public var borderColor: Swift.String?
+  public var brightness: Swift.Float?
+  public var color: Swift.String?
+  public var halo: AAInfographics.AAHalo?
+  public var lineWidth: Swift.Float?
+  public var lineWidthPlus: Swift.Float?
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool) -> AAInfographics.AAHover
+  @discardableResult
+  public func borderColor(_ prop: Swift.String) -> AAInfographics.AAHover
+  @discardableResult
+  public func brightness(_ prop: Swift.Float) -> AAInfographics.AAHover
+  @discardableResult
+  public func color(_ prop: Swift.String) -> AAInfographics.AAHover
+  @discardableResult
+  public func halo(_ prop: AAInfographics.AAHalo) -> AAInfographics.AAHover
+  @discardableResult
+  public func lineWidth(_ prop: Swift.Float) -> AAInfographics.AAHover
+  @discardableResult
+  public func lineWidthPlus(_ prop: Swift.Float) -> AAInfographics.AAHover
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AASelect : AAInfographics.AAObject {
+  public var enabled: Swift.Bool?
+  public var borderColor: Swift.String?
+  public var color: Swift.String?
+  public var halo: AAInfographics.AAHalo?
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool) -> AAInfographics.AASelect
+  @discardableResult
+  public func borderColor(_ prop: Swift.String) -> AAInfographics.AASelect
+  @discardableResult
+  public func color(_ prop: Swift.String) -> AAInfographics.AASelect
+  @discardableResult
+  public func halo(_ prop: AAInfographics.AAHalo) -> AAInfographics.AASelect
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAHalo : AAInfographics.AAObject {
+  public var attributes: [Swift.String : Any]?
+  public var opacity: Swift.Float?
+  public var size: Swift.Float?
+  @discardableResult
+  public func attributes(_ prop: [Swift.String : Any]) -> AAInfographics.AAHalo
+  @discardableResult
+  public func opacity(_ prop: Swift.Float) -> AAInfographics.AAHalo
+  @discardableResult
+  public func size(_ prop: Swift.Float) -> AAInfographics.AAHalo
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAInactive : AAInfographics.AAObject {
+  public var enabled: Swift.Bool?
+  public var opacity: Swift.Float?
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool) -> AAInfographics.AAInactive
+  @discardableResult
+  public func opacity(_ prop: Swift.Float) -> AAInfographics.AAInactive
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAStyle : AAInfographics.AAObject {
+  public var background: Swift.String?
+  public var backgroundColor: Swift.String?
+  public var border: Swift.String?
+  public var borderRadius: Swift.String?
+  public var color: Swift.String?
+  public var cursor: Swift.String?
+  public var fontFamily: Swift.String?
+  public var fontSize: Swift.String?
+  public var fontWeight: Swift.String?
+  public var height: Swift.Float?
+  public var lineWidth: Swift.Float?
+  public var opacity: Swift.Float?
+  public var padding: Swift.String?
+  public var pointerEvents: Swift.String?
+  public var position: Swift.String?
+  public var textAlign: Swift.String?
+  public var textDecoration: Swift.String?
+  public var textOutline: Swift.String?
+  public var textOverflow: Swift.String?
+  public var top: Swift.String?
+  public var transition: Swift.String?
+  public var whiteSpace: Swift.String?
+  public var width: Swift.Float?
+  @discardableResult
+  public func background(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func backgroundColor(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func border(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func borderRadius(_ prop: Swift.Float?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func color(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func cursor(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func fontFamily(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func fontSize(_ prop: Swift.Float?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func fontWeight(_ prop: AAInfographics.AAChartFontWeightType?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func height(_ prop: Swift.Float?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func lineWidth(_ prop: Swift.Float?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func opacity(_ prop: Swift.Float?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func padding(_ prop: Swift.Float?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func pointerEvents(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func position(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func textAlign(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func textDecoration(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func textOutline(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func textOverflow(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func top(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func transition(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func whiteSpace(_ prop: Swift.String?) -> AAInfographics.AAStyle
+  @discardableResult
+  public func width(_ prop: Swift.Float?) -> AAInfographics.AAStyle
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AASubtitle : AAInfographics.AAObject {
+  public var text: Swift.String?
+  public var style: AAInfographics.AAStyle?
+  public var align: Swift.String?
+  public var verticalAlign: Swift.String?
+  public var x: Swift.Float?
+  public var y: Swift.Float?
+  public var userHTML: Swift.Bool?
+  @discardableResult
+  public func text(_ prop: Swift.String?) -> AAInfographics.AASubtitle
+  @discardableResult
+  public func style(_ prop: AAInfographics.AAStyle?) -> AAInfographics.AASubtitle
+  @discardableResult
+  public func align(_ prop: AAInfographics.AAChartAlignType?) -> AAInfographics.AASubtitle
+  @discardableResult
+  public func verticalAlign(_ prop: AAInfographics.AAChartVerticalAlignType?) -> AAInfographics.AASubtitle
+  @discardableResult
+  public func x(_ prop: Swift.Float?) -> AAInfographics.AASubtitle
+  @discardableResult
+  public func y(_ prop: Swift.Float?) -> AAInfographics.AASubtitle
+  @discardableResult
+  public func userHTML(_ prop: Swift.Bool?) -> AAInfographics.AASubtitle
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AATitle : AAInfographics.AAObject {
+  public var text: Swift.String?
+  public var style: AAInfographics.AAStyle?
+  public var align: Swift.String?
+  public var verticalAlign: Swift.String?
+  public var x: Swift.Float?
+  public var y: Swift.Float?
+  public var userHTML: Swift.Bool?
+  @discardableResult
+  public func text(_ prop: Swift.String?) -> AAInfographics.AATitle
+  @discardableResult
+  public func style(_ prop: AAInfographics.AAStyle?) -> AAInfographics.AATitle
+  @discardableResult
+  public func align(_ prop: AAInfographics.AAChartAlignType?) -> AAInfographics.AATitle
+  @discardableResult
+  public func verticalAlign(_ prop: AAInfographics.AAChartVerticalAlignType?) -> AAInfographics.AATitle
+  @discardableResult
+  public func x(_ prop: Swift.Float?) -> AAInfographics.AATitle
+  @discardableResult
+  public func y(_ prop: Swift.Float?) -> AAInfographics.AATitle
+  @discardableResult
+  public func userHTML(_ prop: Swift.Bool?) -> AAInfographics.AATitle
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AATooltip : AAInfographics.AAObject {
+  public var backgroundColor: Any?
+  public var borderColor: Swift.String?
+  public var borderRadius: Swift.Float?
+  public var borderWidth: Swift.Float?
+  public var style: AAInfographics.AAStyle?
+  public var enabled: Swift.Bool?
+  public var useHTML: Swift.Bool?
+  public var formatter: Swift.String?
+  public var headerFormat: Swift.String?
+  public var pointFormat: Swift.String?
+  public var footerFormat: Swift.String?
+  public var valueDecimals: Swift.Int?
+  public var shared: Swift.Bool?
+  public var valueSuffix: Swift.String?
+  public var followTouchMove: Swift.Bool?
+  public var shadow: Swift.Bool?
+  public var padding: Swift.Float?
+  public var pointFormatter: Swift.String?
+  public var positioner: Swift.String?
+  public var dateTimeLabelFormats: AAInfographics.AADateTimeLabelFormats?
+  @discardableResult
+  public func backgroundColor(_ prop: Any?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func borderColor(_ prop: Swift.String?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func borderRadius(_ prop: Swift.Float?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func borderWidth(_ prop: Swift.Float?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func style(_ prop: AAInfographics.AAStyle?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func enabled(_ prop: Swift.Bool?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func useHTML(_ prop: Swift.Bool?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func formatter(_ prop: Swift.String) -> AAInfographics.AATooltip
+  @discardableResult
+  public func headerFormat(_ prop: Swift.String?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func pointFormat(_ prop: Swift.String?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func footerFormat(_ prop: Swift.String?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func valueDecimals(_ prop: Swift.Int?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func shared(_ prop: Swift.Bool?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func valueSuffix(_ prop: Swift.String?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func followTouchMove(_ prop: Swift.Bool?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func shadow(_ prop: Swift.Bool?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func padding(_ prop: Swift.Float?) -> AAInfographics.AATooltip
+  @discardableResult
+  public func pointFormatter(_ prop: Swift.String) -> AAInfographics.AATooltip
+  @discardableResult
+  public func positioner(_ prop: Swift.String) -> AAInfographics.AATooltip
+  @discardableResult
+  public func dateTimeLabelFormats(_ prop: AAInfographics.AADateTimeLabelFormats?) -> AAInfographics.AATooltip
+  public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAXAxis : AAInfographics.AAAxis {
+  override public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AAYAxis : AAInfographics.AAAxis {
+  public var stackLabels: [Swift.String : Any]?
+  @discardableResult
+  public func stackLabels(_ prop: [Swift.String : Any]?) -> AAInfographics.AAYAxis
+  override public init()
+  @objc deinit
+}
+extension AAInfographics.AAChartAxisType : Swift.Equatable {}
+extension AAInfographics.AAChartAxisType : Swift.Hashable {}
+extension AAInfographics.AAChartAxisType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartAnimationType : Swift.Equatable {}
+extension AAInfographics.AAChartAnimationType : Swift.Hashable {}
+extension AAInfographics.AAChartAnimationType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartType : Swift.Equatable {}
+extension AAInfographics.AAChartType : Swift.Hashable {}
+extension AAInfographics.AAChartType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartLayoutType : Swift.Equatable {}
+extension AAInfographics.AAChartLayoutType : Swift.Hashable {}
+extension AAInfographics.AAChartLayoutType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartAlignType : Swift.Equatable {}
+extension AAInfographics.AAChartAlignType : Swift.Hashable {}
+extension AAInfographics.AAChartAlignType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartVerticalAlignType : Swift.Equatable {}
+extension AAInfographics.AAChartVerticalAlignType : Swift.Hashable {}
+extension AAInfographics.AAChartVerticalAlignType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartZoomType : Swift.Equatable {}
+extension AAInfographics.AAChartZoomType : Swift.Hashable {}
+extension AAInfographics.AAChartZoomType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartStackingType : Swift.Equatable {}
+extension AAInfographics.AAChartStackingType : Swift.Hashable {}
+extension AAInfographics.AAChartStackingType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartSymbolType : Swift.Equatable {}
+extension AAInfographics.AAChartSymbolType : Swift.Hashable {}
+extension AAInfographics.AAChartSymbolType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartSymbolStyleType : Swift.Equatable {}
+extension AAInfographics.AAChartSymbolStyleType : Swift.Hashable {}
+extension AAInfographics.AAChartSymbolStyleType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartFontWeightType : Swift.Equatable {}
+extension AAInfographics.AAChartFontWeightType : Swift.Hashable {}
+extension AAInfographics.AAChartFontWeightType : Swift.RawRepresentable {}
+extension AAInfographics.AAChartLineDashStyleType : Swift.Equatable {}
+extension AAInfographics.AAChartLineDashStyleType : Swift.Hashable {}
+extension AAInfographics.AAChartLineDashStyleType : Swift.RawRepresentable {}
+extension AAInfographics.AALinearGradientDirection : Swift.Equatable {}
+extension AAInfographics.AALinearGradientDirection : Swift.Hashable {}
+extension AAInfographics.AALinearGradientDirection : Swift.RawRepresentable {}

@@ -13,4 +13,14 @@ Pod::Spec.new do |s|
     s.resources     = "AAInfographics/AAJSFiles.bundle"
     s.requires_arc  = true
     s.swift_version = '5.0'
+    
+    s.static_framework = true
+    s.subspec 'Framework' do |sf|
+        sf.vendored_framework = "Framework/Framework/7.3.0/AAInfographics.xcframework"
+    end
+  
+    s.subspec 'Source' do |sc|
+        sc.source_files  = 'AAInfographics/**/*.{swift}'
+    end
+    
 end
