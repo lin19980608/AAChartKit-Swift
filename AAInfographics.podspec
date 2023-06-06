@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
     
     s.static_framework = true
     s.subspec 'Framework' do |sf|
-        sf.vendored_framework = "Framework/Framework/7.3.0/AAInfographics.xcframework"
+        sf.vendored_framework = "Framework/7.3.0/AAInfographics.xcframework"
     end
   
     s.subspec 'Source' do |sc|
